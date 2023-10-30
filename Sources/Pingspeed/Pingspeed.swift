@@ -73,7 +73,7 @@ public struct PSReachability {
             let reachabilityState = try JSONDecoder().decode(PingSpeedModel.self, from: data)
             
             if (reachabilityState.ping) < 10 {
-                return .perfect(reachabilityState.ping, reachabilityState)
+                pingState = .perfect(reachabilityState.ping, reachabilityState)
             } else  if (reachabilityState.ping) < 50 {
                 pingState = .fast(reachabilityState.ping, reachabilityState)
             } else  if (reachabilityState.ping) < 200 {
