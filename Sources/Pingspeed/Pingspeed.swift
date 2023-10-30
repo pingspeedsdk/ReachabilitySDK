@@ -31,7 +31,7 @@ public struct PSReachability {
     public struct PingSpeedModel:Codable {
         let time:Int
         let ping:Int
-        let backhash:Int
+        let backhash:String
     }
     
     public enum ReachabilityState {
